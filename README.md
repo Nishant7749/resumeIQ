@@ -175,35 +175,31 @@ npm run dev
 
 ## 🏗️ Application Workflow
 
-```mermaid
-flowchart TD
-    A([Start]) --> B[Upload Resume (PDF)]
-    B --> C[Frontend Validation]
-    C --> D[Send Resume to Backend]
-
-    D --> E[Extract PDF Text]
-    E --> F[Process Resume with AI]
-
-    F --> G[Generate Analysis]
-    G --> G1[ATS Score]
-    G --> G2[Keyword Analysis]
-    G --> G3[Skills Extraction]
-    G --> G4[Strengths & Weaknesses]
-    G --> G5[Missing Sections]
-    G --> G6[Improvement Suggestions]
-
-    G1 --> H[Return Analysis Report]
-    G2 --> H
-    G3 --> H
-    G4 --> H
-    G5 --> H
-    G6 --> H
-
-    H --> I[Display Interactive Dashboard]
-    I --> J[Download PDF Report]
-    J --> K([End])
-```
-
+User
+   │
+   ▼
+React Frontend
+   │
+Axios API
+   │
+   ▼
+Node.js + Express
+   │
+   ├── PDF Parser
+   │
+   └── Gemini AI
+            │
+            ▼
+     Resume Analysis
+            │
+            ▼
+ ATS Score • Skills • Keywords • Suggestions
+            │
+            ▼
+     Interactive Dashboard
+            │
+            ▼
+      PDF Report Download
 ---
 
 ## 📄 License
