@@ -175,31 +175,54 @@ npm run dev
 
 ## 🏗️ Application Workflow
 
-User
-   │
-   ▼
-React Frontend
-   │
-Axios API
-   │
-   ▼
-Node.js + Express
-   │
-   ├── PDF Parser
-   │
-   └── Gemini AI
-            │
-            ▼
-     Resume Analysis
-            │
-            ▼
- ATS Score • Skills • Keywords • Suggestions
-            │
-            ▼
-     Interactive Dashboard
-            │
-            ▼
-      PDF Report Download
+## 🏗️ Application Workflow
+
+```text
+                    ┌──────────────┐
+                    │     User     │
+                    └──────┬───────┘
+                           │
+                           ▼
+               ┌─────────────────────┐
+               │   React Frontend    │
+               └──────┬──────────────┘
+                      │
+                 Axios API
+                      │
+                      ▼
+              ┌─────────────────────┐
+              │  Node.js + Express  │
+              └──────┬──────────────┘
+                     │
+        ┌────────────┴────────────┐
+        │                         │
+        ▼                         ▼
+ ┌──────────────┐        ┌────────────────┐
+ │  PDF Parser  │        │   Gemini AI    │
+ └──────┬───────┘        └────────┬───────┘
+        └──────────────┬──────────┘
+                       │
+                       ▼
+           ┌──────────────────────────┐
+           │     Resume Analysis      │
+           └───────────┬──────────────┘
+                       │
+                       ▼
+    ┌─────────────────────────────────────────┐
+    │ ATS Score • Skills • Keywords •         │
+    │ Strengths • Weaknesses • Suggestions    │
+    └─────────────────┬───────────────────────┘
+                      │
+                      ▼
+          ┌────────────────────────┐
+          │ Interactive Dashboard  │
+          └──────────┬─────────────┘
+                     │
+                     ▼
+          ┌────────────────────────┐
+          │ Download PDF Report    │
+          └────────────────────────┘
+```
 ---
 
 ## 📄 License
