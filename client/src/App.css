@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+.font-elite {
+    font-family: "Special Elite";
+}
+
+.font-syne {
+    font-family: "Syne Mono";
+}
+
+.font-space {
+    font-family: "Space Grotesk";
+}
